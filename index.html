@@ -18,6 +18,24 @@
             text-align:center;
         }
     </style>
+    <script>
+        
+        function  ConvertisseurC_F(){
+         var input1= document.getElementById('c').value; 
+  
+       var div= (parseInt(input1 )*9/5) + 32 ;
+     document.getElementById('f').value=div;
+      
+        }
+        function  ConvertisseurF_C(){
+         var input2= document.getElementById('f').value; 
+  
+       var div= ((parseInt(input2 )*9/5) + 32)/32 ;
+     document.getElementById('c').value=div;
+      
+        }
+        
+        </script>
   </head>
   <body>
     <h1>Convertisseur De Temperature</h1> 
@@ -31,16 +49,17 @@
             <td >
                 <input type="text" id="f">
             </td>
-        </tr>
+        </tr> 
         <tr>
             <td>
-                <button>C To F</button>
+                <button onclick="ConvertisseurC_F()">C To F</button>
+                
             </td>
             <td>
                 <button>RAZ</button>
             </td>
             <td>
-                <button>F To C</button>
+                <button onclick="ConvertisseurF_T()">F To C</button>
             </td>
         </tr>
     </table>
